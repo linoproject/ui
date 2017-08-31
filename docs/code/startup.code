@@ -1,0 +1,15 @@
+ <body>
+  
+  	<div style="display:none;">
+  		<span class="x-lprjstartup">
+  			
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Application name</span>
+  			<span class="x-lprjelm x-lprjvar-Page">index</span>
+  			<span class="x-lprjelm x-lprjvar-ApplicationDir">application</span>
+  			<span class="x-lprjelm x-lprjvar-Debug">true</span>
+
+  			
+  			<span class="x-lprjelm x-lprjvar-ServiceDir">../vsphere</span>
+  		
+  		</span>
+  	</div>	

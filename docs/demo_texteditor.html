@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/oop/oop.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../lib/bootstrap/plugin/loading.js"></script>
+    
+    <script src="../lib/application/Application.js"></script> <!-- Key start file -->
+  	
+    <link href="../css/main.css" rel="stylesheet" />
+    <title>Documentation</title>
+    </head>
+    
+<body>
+
+ <h1>Example Texteditor and Widget interacitons</h1>
+ <a href="index.html">Back</a>
+ <p>
+ Events are handled by button declaration: <pre>&lt;button class="x-lprjwdg-button x-lprjvar-action-text1_getVal x-lprjvar-return-consolelog" id="wdgButtonGetValue"&gt;Get Value&lt;/button&gt;</pre>
+ </p>
+ 
+ <div class="x-lprjwdg-sequencediagram" id="seq1">
+   <span class="x-lprjelm x-lprjvar-sequence">Button->Textarea: fireAction("getVal")</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Textarea->Button: return(oData)</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Button->Consolelog: fireAction(oData)</span>
+</div>
+ 
+<div class="x-lprjwdg-consolelog" id="consolelog"></div>
+ <div style="display:none;">
+  		<span class="x-lprjstartup">
+  			
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Linoprj framework Documentation - DEMO: Text editor</span>
+  			<!-- <span class="x-lprjelm x-lprjvar-Page">demo_texteditor</span>-->
+  			<span class="x-lprjelm x-lprjvar-DirApp">../application</span>
+  			<span class="x-lprjelm x-lprjvar-DirLib">../lib</span>
+  			<span class="x-lprjelm x-lprjvar-DirWidget">../lib/application/widget</span>
+  			<span class="x-lprjelm x-lprjvar-Debug">true</span>
+  			
+  		
+  		</span>
+  		
+  	</div>	
+  
+  <h2>Widget textarea</h2>
+    
+    <p>
+  	<div class="x-lprjwdg-tplcode" id="code10">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">demo_texteditor.html</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   	</div> 
+   	
+  </p>
+  
+ <div class="x-lprjwdg-texteditor" id="text1">
+ </div>
+  
+ <button class="x-lprjwdg-button x-lprjvar-action-text1_getVal x-lprjvar-return-consolelog" id="wdgButtonGetValue">Get Value</button>
+</body>
+</html>

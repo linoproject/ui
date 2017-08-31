@@ -1,0 +1,5 @@
+ <div class="x-lprjwdg-sequencediagram" id="seq1">
+   	<span class="x-lprjelm x-lprjvar-sequence">
+   		A->B: Message
+   	</span>
+   </div>

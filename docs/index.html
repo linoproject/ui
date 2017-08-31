@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/oop/oop.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../lib/bootstrap/plugin/loading.js"></script>
+    
+    <script src="../lib/application/Application.js"></script> <!-- Key start file -->
+  	
+    <link href="../css/main.css" rel="stylesheet" />
+    <title>Documentation</title>
+
+    
+  </head>
+  
+  <body>
+  
+  
+  <div style="display:none;">
+  		<span class="x-lprjstartup">
+  			
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Linoprj framework Documentation</span>
+  			<span class="x-lprjelm x-lprjvar-Page">index</span>
+  			<span class="x-lprjelm x-lprjvar-DirApp">../application</span>
+  			<span class="x-lprjelm x-lprjvar-DirLib">../lib</span>
+  			<span class="x-lprjelm x-lprjvar-DirWidget">../lib/application/widget</span>
+  			<span class="x-lprjelm x-lprjvar-Debug">true</span>
+  			
+  		
+  		</span>
+  	</div>	
+  
+  
+  <h1>Index</h1>
+  
+  <div class="x-lprjwdg-index" id="index1">
+  	<span class="x-lprjelm x-lprjvar-elemtitle">h2</span>
+  </div>
+  
+  <h2>Code foundamental</h2>
+  <p>
+  Application definition starts from a single page:
+  </p>
+   <div class="x-lprjwdg-tplcode" id="code1">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/start.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
+  <p>
+  Here define application enviroment
+  </p>
+   <div class="x-lprjwdg-tplcode" id="code2">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/startup.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
+   
+   <h2>Optional autoexecution and JS page</h2>
+  
+  <div class="x-lprjwdg-tplcode" id="code3">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
+
+   <div class="x-lprjwdg-tplcode" id="code4">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.codejs</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
+
+	<h2>Application Flow</h2>
+	
+   <div class="x-lprjwdg-sequencediagram" id="seq1">
+   <span class="x-lprjelm x-lprjvar-sequence">Application Start -> Application Variables: Read</span>
+   	<span class="x-lprjelm x-lprjvar-sequence"> Application Variables -> widget/WidgetLoader: Load</span>
+    <span class="x-lprjelm x-lprjvar-sequence">widget/WidgetLoader -> All widget: Load</span>
+    <span class="x-lprjelm x-lprjvar-sequence">All widget-->ApplicationClass : Load</span>
+    <span class="x-lprjelm x-lprjvar-sequence">ApplicationClass-->autofireAction: Call</span>
+   </div>
+   
+   <div class="x-lprjwdg-tplcode" id="code5">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.codejs</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
+   
+   <div class="x-lprjwdg-sequencediagram" id="seq2">
+   <span class="x-lprjelm x-lprjvar-sequence">Document -> AllWidget :Read</span>
+   <span class="x-lprjelm x-lprjvar-sequence">AllWidget -> Widget :Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">AllWidget -> Widget X:Load Once</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget X -> Widget X Init: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget X Init -> Widget External Lib: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget External Lib -> Widget Start: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget X Init -> Widget Start: Load</span>
+   
+   	
+   </div>
+   
+   <h2>Widget Section</h2>
+   <ul>
+   <li> <a href="widget.html">ALL WIDGET</a></li>
+  </ul>
+  <h2>Demo Section</h2>
+  <ul>
+  <li> <a href="demo_texteditor.html">Texteditor with Buttons and return value</a></li>
+  </ul>
+
+  <h2>TODO List</h2>
+  <ul>
+  	<li>Multi level index</li>
+  	<li>Editor</li>
+  	<li>Form</li>
+  	<li>Page cycle</li>
+  	<li>Connectors</li>
+  </ul>
+
+  
+  </body>
+ </html>
+ 
