@@ -1,6 +1,6 @@
 # Linoproject User Interface Framework
 
-This framework help backend team to let design working better with ui without javascript intervention by developers. It uses html class to define widget, actions, etc...
+This framework is built to help developers and design working better with an html only syntax (without javascript coding) and building html5 applications. It uses html class definition place and intercts with widget, actions, etc...
 
 ## Installation and test ##
 
