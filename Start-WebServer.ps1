@@ -300,7 +300,23 @@ try{
                 #Try to find page
                 try {
             		$EXT = [IO.Path]::GetExtension($($PSScriptRoot + "/" + $($RECEIVED -replace "GET /")))
-                    $HTMLRESPONSE = [System.IO.File]::ReadAllText( $($PSScriptRoot + "/" + $($RECEIVED -replace "GET /") ))
+            		
+            		$HTMLRESPONSE = [System.IO.File]::ReadAllText( $($PSScriptRoot + "/" + $($RECEIVED -replace "GET /") ))
+            		
+            		if ($EXT -eq ".gif"){
+            			$HTMLRESPONSE = [System.IO.File]::ReadAllBytes( $($PSScriptRoot + "/" + $($RECEIVED -replace "GET /") ))
+            		}
+            		if ($EXT -eq ".jpg"){
+            			$HTMLRESPONSE = [System.IO.File]::ReadAllBytes( $($PSScriptRoot + "/" + $($RECEIVED -replace "GET /") ))
+            		}
+            		
+            		if ($EXT -eq ".png"){
+            			$HTMLRESPONSE = [System.IO.File]::ReadAllBytes( $($PSScriptRoot + "/" + $($RECEIVED -replace "GET /") ))
+            		}
+            		
+            		
+                    
+                     
 		        }catch	{
                     "Error"
                     $RESPONSE.StatusCode = 404
@@ -311,42 +327,63 @@ try{
 
         }
 
-        # only send response if not already done
-        if (!$RESPONSEWRITTEN){
- 			       
-        	
-    	    # insert header line string into HTML template
-   		    $HTMLRESPONSE = $HTMLRESPONSE -replace '!HEADERLINE', $HEADERLINE
-    	    # insert result string into HTML template
-   		    $HTMLRESPONSE = $HTMLRESPONSE -replace '!RESULT', $RESULT
+		
 
-    	    # return HTML answer to caller
-    	    $BUFFER = [Text.Encoding]::UTF8.GetBytes($HTMLRESPONSE)
-    	    
-    	    
+		$BUFFER = [Text.Encoding]::UTF8.GetBytes($HTMLRESPONSE)
+
+        # only send response if not already done
+        if (!$RESPONSEWRITTEN -and $RESPONSE.StatusCode -eq 200){
+ 			       
     	    if ($EXT -ne ""){
-    	    	"$EXT"
+    	    	
     	    	if ($EXT -eq ".html"){
+    	    		
         			$RESPONSE.Headers.Add("Content-Type","text/html")
         		}
         		if ($EXT -eq ".js"){
+        			
         			$RESPONSE.Headers.Add("Content-Type","application/javascript")
         		}
         		if ($EXT -eq ".css"){
+        			
         			$RESPONSE.Headers.Add("Content-Type","text/css")
         		}
-        		
-        		if ($EXT -eq ".map"){
-        			$RESPONSE.Headers.Add("Content-Type","application/x-navimap")
+        		if ($EXT -eq ".html"){
+        			
+        			$RESPONSE.Headers.Add("Content-Type","text/html")
+        		}
+        		if ($EXT -eq ".gif"){
+        			$BUFFER = $HTMLRESPONSE
+        			$RESPONSE.Headers.Add("Content-Type","image/gif")
+        		}
+        		if ($EXT -eq ".jpg"){
+        			$BUFFER = $HTMLRESPONSE
+        			$RESPONSE.Headers.Add("Content-Type","image/jpg")
+        		}
+        		if ($EXT -eq ".png"){
+        			$BUFFER = $HTMLRESPONSE
+        			$RESPONSE.Headers.Add("Content-Type","image/png")
         		}
         		
+        		
+        	}else{
+        		 # return HTML answer to caller
+    	    	# insert header line string into HTML template
+		   		$HTMLRESPONSE = $HTMLRESPONSE -replace '!HEADERLINE', $HEADERLINE
+		    	# insert result string into HTML template
+		   		$HTMLRESPONSE = $HTMLRESPONSE -replace '!RESULT', $RESULT
+		   		$BUFFER = [Text.Encoding]::UTF8.GetBytes($HTMLRESPONSE)
         	}
     	    $EXT = ""
     	    $RESPONSE.StatusCode = 200
-    	    $RESPONSE.ContentLength64 = $BUFFER.Length
-    	    $RESPONSE.OutputStream.Write($BUFFER, 0, $BUFFER.Length)
+    	    
 		}
-
+		
+		
+		$RESPONSE.ContentLength64 = $BUFFER.Length
+    	$RESPONSE.OutputStream.Write($BUFFER, 0, $BUFFER.Length)
+		
+	
         # and finish answer to client
         $RESPONSE.Close()
 
