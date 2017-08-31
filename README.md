@@ -14,7 +14,7 @@ This framework help backend team to let design working better with ui without ja
 
 ### Running in powershell ###
 * git pull this repo
-* run powershell script in the root direcotry 
+* run the web-server powershell script in the direcotry 
 ```powershell
 PS> ./Start-WebServer.ps1
 ```
