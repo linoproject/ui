@@ -1,5 +1,5 @@
-<div style="display:none;">
-	<span class="x-lprjwdg-actionws" id="wdgActionWs">
- 		<span class="x-lprjelm x-lprjvar-ActionWs1 x-lprjws x-wdgTarget-areaWs1">../vsphere/ws1</span>
- 	</span>
-</div>
+<div class="x-lprjwdg-tplcode" id="areaHosts">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/start.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
