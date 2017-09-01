@@ -1,0 +1,37 @@
+
+h1{
+	color: #fff;
+	text-align: left;
+	padding-left: 30px;
+}
+
+section {
+	margin-top: 40px;
+	border-style: dashed;
+	border-width: thin;
+	
+}
+
+section.service {
+	padding-top: 180px;
+	text-align: left;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+section.service a{
+	color: #fff;
+}
+
+section.codebase {
+	text-align: left;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.code {
+	width: 850px;
+}
+
+.code.filename{
+	width: 850px;
+}

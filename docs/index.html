@@ -1,0 +1,212 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/oop/oop.js"></script>
+    <!-- Start file -->
+    <script src="../lib/application/Application.js"></script> <!-- Key start file -->
+       
+    <!-- Styles -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="style/widget.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="../themes/doctor1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../themes/doctor1/css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    
+    
+    
+  	
+    
+    <title>Documentation</title>
+
+    
+  </head>
+  
+  <body>
+  
+  
+  <div style="display:none;">
+  		<span class="x-lprjstartup">
+  			
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Linoprj framework Documentation</span>
+  			<span class="x-lprjelm x-lprjvar-Page">index</span>
+  			<span class="x-lprjelm x-lprjvar-DirApp">../application</span>
+  			<span class="x-lprjelm x-lprjvar-DirLib">../lib</span>
+  			<span class="x-lprjelm x-lprjvar-DirWidget">../lib/application/widget</span>
+  			<span class="x-lprjelm x-lprjvar-Debug">true</span>
+  			
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/js/bootstrap.min.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/plugin/loading.js</span>
+  		
+  		</span>
+  	</div>	
+  
+  <header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 header-logo">
+					<br>
+					<a href="index.html"><img src="../themes/doctor1/img/logo.png" alt="" class="img-responsive logo"></a>
+				</div>
+
+				<div class="col-md-7">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
+
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      
+					      <ul class="nav navbar-nav navbar-right">
+					      
+					        <li><a class="menu" href="widget.html" >Widget</a></li>
+					        <li><a class="menu" href="demo/demo-application.html">Demo Application</a></li>
+					        
+					        
+					      </ul>
+					    </div><!-- /navbar-collapse -->
+					  </div><!-- / .container-fluid -->
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> 
+  
+  
+  <section class="service text-center">
+  <div class="container">
+<div class="row">
+  <h1>Index</h1>
+  
+  <div class="x-lprjwdg-index" id="index1">
+  	<span class="x-lprjelm x-lprjvar-elemtitle">h2</span>
+  </div>
+
+
+</div>
+</div>  
+
+</section>
+
+<section class="codebase">
+ <div class="container">
+  <h2>Code base</h2>
+  <p>
+  Application definition starts from a single page:
+  </p>
+   <div class="x-lprjwdg-tplcode" id="code1">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/start.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   </div>
+  <p>
+  Here define application enviroment
+  </p>
+   <div class="x-lprjwdg-tplcode" id="code2">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/startup.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   </div>
+   
+   <h2>Optional Load external libs -> like bootstrap or jquery_ui</h2>
+   <div class="x-lprjwdg-tplcode" id="code2a">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_external_libs.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   </div>
+   
+   <h2>Optional autoexecution and JS page</h2>
+  
+  <div class="x-lprjwdg-tplcode" id="code3">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   </div>
+
+   <div class="x-lprjwdg-tplcode" id="code4">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.codejs</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   </div>
+
+	<h2>Application Flow</h2>
+	
+   <div class="x-lprjwdg-sequencediagram" id="seq1">
+   <span class="x-lprjelm x-lprjvar-sequence">Application Start -> Application Variables: Read</span>
+   <span class="x-lprjelm x-lprjvar-sequence"> Application Variables -> External libs: Optional Load</span>
+   	<span class="x-lprjelm x-lprjvar-sequence"> External libs -> widget/WidgetLoader: Load</span>
+    <span class="x-lprjelm x-lprjvar-sequence">widget/WidgetLoader -> All widget: Load</span>
+    <span class="x-lprjelm x-lprjvar-sequence">All widget-->ApplicationClass : Load</span>
+    <span class="x-lprjelm x-lprjvar-sequence">ApplicationClass-->autofireAction: Call</span>
+   </div>
+   
+   <div class="x-lprjwdg-tplcode" id="code5">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.codejs</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   </div>
+   
+   <div class="x-lprjwdg-sequencediagram" id="seq2">
+   <span class="x-lprjelm x-lprjvar-sequence">Document -> AllWidget :Read</span>
+   <span class="x-lprjelm x-lprjvar-sequence">AllWidget -> Widget :Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">AllWidget -> Widget X:Load Once</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget X -> Widget X Init: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget X Init -> Widget External Lib: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget External Lib -> Widget Start: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence">Widget X Init -> Widget Start: Load</span>
+   
+   	
+   </div>
+
+
+</div>
+</section>
+ 
+<section class="codebase">
+ <div class="container">  
+
+   <h2>Widget Section</h2>
+   <ul>
+   <li> <a href="widget.html">ALL WIDGET</a></li>
+  </ul>
+  <h2>Demo Section</h2>
+  <ul>
+  <li> <a href="demo_texteditor.html">Texteditor with Buttons and return value</a></li>
+  </ul>
+</div>
+</section>
+
+<section class="codebase">
+ <div class="container">  
+
+  <h2>TODO List</h2>
+  <ul>
+  	<li>Multi level index</li>
+  	<li>Editor</li>
+  	<li>Form</li>
+  	<li>Page cycle</li>
+  	<li>Connectors</li>
+  </ul>
+</div>
+</section>
+  
+  </body>
+ </html>
+ 

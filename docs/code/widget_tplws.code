@@ -1,0 +1,6 @@
+<div class="x-lprjwdg-tplws x-toggle-true x-target-tgtElement" id="areaTemplate">
+	<span class="x-lprjelm x-lprjvar-template" style="display:none">application/template/template.html</span>
+	<div>
+		<ul id="tgtElement"></ul>
+	</div>
+</div> 
