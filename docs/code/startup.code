@@ -3,13 +3,19 @@
   	<div style="display:none;">
   		<span class="x-lprjstartup">
   			
-  			<span class="x-lprjelm x-lprjvar-ApplicationName">Application name</span>
-  			<span class="x-lprjelm x-lprjvar-Page">index</span>
-  			<span class="x-lprjelm x-lprjvar-ApplicationDir">application</span>
-  			<span class="x-lprjelm x-lprjvar-Debug">true</span>
-
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Application Name</span>
+  			<span class="x-lprjelm x-lprjvar-Page">pagename</span>
+  			<span class="x-lprjelm x-lprjvar-ApplicationDir">applicationdir</span>
   			
-  			<span class="x-lprjelm x-lprjvar-ServiceDir">../vsphere</span>
-  		
+  			
+  			<span class="x-lprjelm x-lprjvar-DirLib">lib dir</span>
+  			<span class="x-lprjelm x-lprjvar-DirApp">lib application dir</span>
+  			<span class="x-lprjelm x-lprjvar-DirWidget">lib application widget dir</span>
+  			
+  			
+  			<span class="x-lprjelm x-lprjvar-ServiceDir">directory services</span>
+  			
+  			
+  			  		
   		</span>
   	</div>	

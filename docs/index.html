@@ -8,9 +8,10 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/oop/oop.js"></script>
-    
-    <!-- Bootstrap -->
-    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Start file -->
+    <script src="../lib/application/Application.js"></script> <!-- Key start file -->
+       
+    <!-- Styles -->
     <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     
     <link href="../css/main.css" rel="stylesheet" />
@@ -21,9 +22,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
     
-    <script src="../lib/bootstrap/plugin/loading.js"></script>
     
-    <script src="../lib/application/Application.js"></script> <!-- Key start file -->
+    
   	
     
     <title>Documentation</title>
@@ -44,6 +44,8 @@
   			<span class="x-lprjelm x-lprjvar-DirWidget">../lib/application/widget</span>
   			<span class="x-lprjelm x-lprjvar-Debug">true</span>
   			
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/js/bootstrap.min.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/plugin/loading.js</span>
   		
   		</span>
   	</div>	
@@ -120,7 +122,14 @@
    <div class="x-lprjwdg-tplcode" id="code2">
    	<span class="x-lprjelm x-lprjvar-CodeFile">code/startup.code</span>
    	<span class="x-lprjelm x-lprjvar-Style">code</span>
-   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
+   </div>
+   
+   <h2>Optional Load external libs -> like bootstrap or jquery_ui</h2>
+   <div class="x-lprjwdg-tplcode" id="code2a">
+   	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_external_libs.code</span>
+   	<span class="x-lprjelm x-lprjvar-Style">code</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
    </div>
    
    <h2>Optional autoexecution and JS page</h2>
@@ -128,20 +137,21 @@
   <div class="x-lprjwdg-tplcode" id="code3">
    	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.code</span>
    	<span class="x-lprjelm x-lprjvar-Style">code</span>
-   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
    </div>
 
    <div class="x-lprjwdg-tplcode" id="code4">
    	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.codejs</span>
    	<span class="x-lprjelm x-lprjvar-Style">code</span>
-   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
    </div>
 
 	<h2>Application Flow</h2>
 	
    <div class="x-lprjwdg-sequencediagram" id="seq1">
    <span class="x-lprjelm x-lprjvar-sequence">Application Start -> Application Variables: Read</span>
-   	<span class="x-lprjelm x-lprjvar-sequence"> Application Variables -> widget/WidgetLoader: Load</span>
+   <span class="x-lprjelm x-lprjvar-sequence"> Application Variables -> External libs: Optional Load</span>
+   	<span class="x-lprjelm x-lprjvar-sequence"> External libs -> widget/WidgetLoader: Load</span>
     <span class="x-lprjelm x-lprjvar-sequence">widget/WidgetLoader -> All widget: Load</span>
     <span class="x-lprjelm x-lprjvar-sequence">All widget-->ApplicationClass : Load</span>
     <span class="x-lprjelm x-lprjvar-sequence">ApplicationClass-->autofireAction: Call</span>
@@ -150,7 +160,7 @@
    <div class="x-lprjwdg-tplcode" id="code5">
    	<span class="x-lprjelm x-lprjvar-CodeFile">code/optional_startup_autoexecjs.codejs</span>
    	<span class="x-lprjelm x-lprjvar-Style">code</span>
-   	<span class="x-lprjelm x-lprjvar-ShowFile">true</span>
+   	<span class="x-lprjelm x-lprjvar-ShowFile">false</span>
    </div>
    
    <div class="x-lprjwdg-sequencediagram" id="seq2">

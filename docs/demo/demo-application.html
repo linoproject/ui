@@ -10,8 +10,9 @@
     <script src="../../lib/jquery/jquery.js"></script>
     <script src="../../lib/oop/oop.js"></script>
     
-    <!-- Bootstrap -->
-    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../lib/application/Application.js"></script> <!-- Key start file -->
+    
+    <!-- Styles -->
     <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="../../themes/doctor1/css/font-awesome.min.css">
@@ -20,13 +21,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
     
-    
-    
-    <script src="../../lib/bootstrap/plugin/loading.js"></script>
-    
-    
-    <script src="../../lib/application/Application.js"></script> <!-- Key start file -->
-  	
     <link href="../../css/main.css" rel="stylesheet">
     <title>Simple DEMO Application</title>
 
@@ -50,6 +44,14 @@
   			<span class="x-lprjelm x-lprjvar-Debug">true</span>
   			<span class="x-lprjelm x-lprjvar-AutoexecPageMethod">autofireAction</span>
   			<span class="x-lprjelm x-lprjvar-ServiceDir">service_dummy</span>
+  			
+  			
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">jquery_ui/jquery-ui.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">external-test/test.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/js/bootstrap.min.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/plugin/loading.js</span>
+  			
+  			<span class="x-lprjelm x-lprjvar-ExternalCss">css/jquery-css.js</span>
   		
   		</span>
   	</div>	
@@ -95,6 +97,7 @@
 				            <li ><a href="#" class="x-lprjwdg-button x-lprjvar-action-wdgActionWs_ActionService1 menu active" id="wdgButtonService1">Service1</a></li>
 				            <li><a href="#" class="x-lprjwdg-button x-lprjvar-action-wdgActionWs_ActionService2 menu" id="wdgButtonService2" >Service2</a></li>
 				            <li><a href="../index.html" class="menu">Documentation</a></li>
+				            <li><a href="../widget.html" class="menu">All Widgets</a></li>
 				          </ul>
 				        </div>
 					  </div><!-- / .container-fluid -->
@@ -130,7 +133,19 @@
 		</div>
 	  </div>
 	 
+	 <hr>
+	 
+	 <div class="x-lprjwdg-windowdialog" id="winDialog1">
+	<span class="x-lprjelm x-lprjvar-wintitle">Dialog Title Here</span>
+	<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+	</div>
+	<button class="x-lprjwdg-button x-lprjvar-action-winDialog1_open" id="wdgButtonGetValue">Open Window</button>
+	 
     </div>
+
+
+
+	
 
 
   </body>
