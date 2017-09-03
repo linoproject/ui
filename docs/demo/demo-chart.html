@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/oop/oop.js"></script>
+    
+    <script src="../../lib/application/Application.js"></script> <!-- Key start file -->
+    
+    <!-- Styles -->
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../lib/jquery_ui/css/jquery-ui.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../themes/doctor1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../themes/doctor1/css/style.css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    
+    <link href="../../css/main.css" rel="stylesheet">
+    <title>Simple DEMO Application</title>
+
+    
+  </head>
+  
+  <body>
+  
+  	<div style="display:none;" >
+  		<span class="x-lprjstartup">
+  			
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Simple Chart</span>
+  			<span class="x-lprjelm x-lprjvar-Page">index</span>
+  			<span class="x-lprjelm x-lprjvar-ApplicationDir">application</span>
+  			
+  			<span class="x-lprjelm x-lprjvar-DirApp">../../application</span>
+  			<span class="x-lprjelm x-lprjvar-DirLib">../../lib</span>
+  			<span class="x-lprjelm x-lprjvar-DirWidget">../../lib/application/widget</span>
+  			
+  			
+  			<span class="x-lprjelm x-lprjvar-Debug">true</span>
+  			
+  			
+  			
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">jquery_ui/jquery-ui.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/js/bootstrap.min.js</span>
+  			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/plugin/loading.js</span>
+  			
+  			<span class="x-lprjelm x-lprjvar-ExternalCss">css/jquery-css.js</span>
+  		
+  		</span>
+  	</div>	
+    
+	
+  	<div style="display:none;">
+		<span class="x-lprjwdg-actionws" id="wdgActionWs">
+			<span class="x-lprjelm x-lprjvar-ActionGraphBar x-lprjws x-wdgTarget-areaChart1">service_dummy/chart1</span>
+		
+		</span>
+	</div>
+  
+  
+  <header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 header-logo">
+					<br>
+					<a href="index.html"><img src="../../themes/doctor1/img/logo.png" alt="" class="img-responsive logo"></a>
+				</div>
+
+				<div class="col-md-7">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
+
+					    <div id="navbar" class="collapse navbar-collapse">
+				          <ul class="nav navbar-nav navbar-right">
+				            <li ><a href="#" class="x-lprjwdg-button x-lprjvar-action-wdgActionWs_ActionGraphBar menu active" id="wdgButtonGraphBar">Show Bar</a></li>
+				            
+				            <li><a href="../index.html" class="menu">Documentation</a></li>
+				            <li><a href="../widget.html" class="menu">All Widgets</a></li>
+				          </ul>
+				        </div>
+					  </div><!-- / .container-fluid -->
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> <!-- end of header area -->
+  
+
+    <div class="container" style="position: relative; top:100px;">
+
+      <div class="x-lprjwdg-tplsubst starter-template">
+        <h1>Welcome to <span class="x-lprjelm x-lprjvar-ApplicationName"></span> </h1>
+      </div>
+      
+      <div class="x-lprjwdg-chart" id="areaChart1">
+      <span class="x-lprjelm x-lprjvar-charttype">bar</span>
+      <span class="x-lprjelm x-lprjvar-label">My sample label</span>
+      </div>
+	 
+	
+	 
+    </div>
+
+  </body>
+</html>
