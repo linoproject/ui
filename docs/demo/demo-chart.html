@@ -33,7 +33,7 @@
   	<div style="display:none;" >
   		<span class="x-lprjstartup">
   			
-  			<span class="x-lprjelm x-lprjvar-ApplicationName">Simple Application</span>
+  			<span class="x-lprjelm x-lprjvar-ApplicationName">Simple Chart</span>
   			<span class="x-lprjelm x-lprjvar-Page">index</span>
   			<span class="x-lprjelm x-lprjvar-ApplicationDir">application</span>
   			
@@ -43,12 +43,10 @@
   			
   			
   			<span class="x-lprjelm x-lprjvar-Debug">true</span>
-  			<span class="x-lprjelm x-lprjvar-AutoexecPageMethod">autofireAction</span>
-  			<span class="x-lprjelm x-lprjvar-ServiceDir">service_dummy</span>
+  			
   			
   			
   			<span class="x-lprjelm x-lprjvar-ExternalLib">jquery_ui/jquery-ui.js</span>
-  			<span class="x-lprjelm x-lprjvar-ExternalLib">external-test/test.js</span>
   			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/js/bootstrap.min.js</span>
   			<span class="x-lprjelm x-lprjvar-ExternalLib">bootstrap/plugin/loading.js</span>
   			
@@ -57,17 +55,11 @@
   		</span>
   	</div>	
     
-	<div style="display:none;">
-		<span class="x-lprjwdg-actionobj" id="wdgAction1">
-			<span class="x-lprjelm x-lprjvar-Action1">Application_index.action1</span>
-			
-		</span>
-	</div>    
-  
+	
   	<div style="display:none;">
 		<span class="x-lprjwdg-actionws" id="wdgActionWs">
-			<span class="x-lprjelm x-lprjvar-ActionService1 x-lprjws x-wdgTarget-areaService1">service_dummy/service1</span>
-			<span class="x-lprjelm x-lprjvar-ActionService2 x-lprjws x-wdgTarget-areaService2" >service_dummy/service2</span>
+			<span class="x-lprjelm x-lprjvar-ActionGraphBar x-lprjws x-wdgTarget-areaChart1">service_dummy/chart1</span>
+		
 		</span>
 	</div>
   
@@ -95,8 +87,8 @@
 
 					    <div id="navbar" class="collapse navbar-collapse">
 				          <ul class="nav navbar-nav navbar-right">
-				            <li ><a href="#" class="x-lprjwdg-button x-lprjvar-action-wdgActionWs_ActionService1 menu active" id="wdgButtonService1">Service1</a></li>
-				            <li><a href="#" class="x-lprjwdg-button x-lprjvar-action-wdgActionWs_ActionService2 menu" id="wdgButtonService2" >Service2</a></li>
+				            <li ><a href="#" class="x-lprjwdg-button x-lprjvar-action-wdgActionWs_ActionGraphBar menu active" id="wdgButtonGraphBar">Show Bar</a></li>
+				            
 				            <li><a href="../index.html" class="menu">Documentation</a></li>
 				            <li><a href="../widget.html" class="menu">All Widgets</a></li>
 				          </ul>
@@ -115,39 +107,14 @@
         <h1>Welcome to <span class="x-lprjelm x-lprjvar-ApplicationName"></span> </h1>
       </div>
       
-      <div class="x-lprjwdg-tplws x-toggle-true x-target-tgtAreaService1 area" id="areaService1">
-      <span class="x-lprjelm x-lprjvar-template" style="display:none">application/template/service1.html</span>
-      <button class="btn" data-toggle="collapse" data-target="#divService1">Service1</button>
-        
-		<div id="" class="divbox">
-			<ul id="tgtAreaService1">
-			</ul>
-		</div>
-	  </div>
-	  
-	  <div class="x-lprjwdg-tplws x-toggle-true x-target-tgtAreaService2 area" id="areaService2">
-	  	<span class="x-lprjelm x-lprjvar-template" style="display:none">application/template/service2.html</span>
-		<button class="btn" data-toggle="collapse" data-target="#divService2">Service2</button>
-		<div id="" class="divbox">
-			<ul id="tgtAreaService2">
-			</ul>
-		</div>
-	  </div>
+      <div class="x-lprjwdg-chart" id="areaChart1">
+      <span class="x-lprjelm x-lprjvar-charttype">bar</span>
+      <span class="x-lprjelm x-lprjvar-label">My label</span>
+      </div>
 	 
-	 <hr>
-	 
-	 <div class="x-lprjwdg-windowdialog" id="winDialog1">
-	<span class="x-lprjelm x-lprjvar-wintitle">My Title</span>
-	<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-	</div>
-	<button class="x-lprjwdg-button x-lprjvar-action-winDialog1_open" id="wdgButtonGetValue">Open Window</button>
+	
 	 
     </div>
-
-
-
-	
-
 
   </body>
 </html>
