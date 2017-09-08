@@ -1,0 +1,26 @@
+[
+    {
+        "data":  "10",
+        "labels":  "A"
+    },
+    {
+        "data":  "23",
+        "labels":  "B"
+    },
+    {
+        "data":  "15",
+        "labels":  "C"
+    },
+    {
+        "data":  "60",
+        "labels":  "D"
+    },
+    {
+        "data":  "120",
+        "labels":  "E"
+    },
+    {
+        "data":  "160",
+        "labels":  "F"
+    }
+]

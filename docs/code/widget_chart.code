@@ -1,0 +1,6 @@
+<div class="x-lprjwdg-widgetchart" id="chart1">
+	<span class="x-lprjelm x-lprjvar-charttype">bar</span>
+	<span class="x-lprjelm x-lprjvar-label">My label</span>
+	<span class="x-lprjelm x-lprjvar-width">300</span>
+ 	<span class="x-lprjelm x-lprjvar-height">300</span>
+</div>
