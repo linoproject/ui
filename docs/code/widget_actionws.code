@@ -1,5 +1,7 @@
 <div style="display:none;">
 	<span class="x-lprjwdg-actionws" id="wdgActionWs">
- 		<span class="x-lprjelm x-lprjvar-ActionWs1 x-lprjws x-wdgTarget-areaWs1">../vsphere/ws1</span>
+ 		<span class="x-lprjelm x-lprjvar-ActionWs1 x-lprjws x-wdgTarget-areaWs1">path/to/webservice</span>
+ 		<span class="x-lprjelm x-lprjvar-scheduler">10</span>
+		<span class="x-lprjelm x-lprjvar-autostart">true</span>
  	</span>
 </div>
