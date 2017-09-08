@@ -56,11 +56,6 @@ $HTMLRESPONSECONTENTS = @{
 <html><body>
 	!HEADERLINE
 	<pre>!RESULT</pre>
-	<form method="GET" action="/">
-	<b>!PROMPT&nbsp;</b><input type="text" maxlength=255 size=80 name="command" value='!FORMFIELD'>
-  <input type="submit" name="button" value="Enter">
-	</form>
-</body></html>
 "@
   'GET /page'  =  @"
 <html><body>!HEADERLINE
@@ -102,6 +97,8 @@ $LISTENER.Start()
 $EXT = ""
 $Error.Clear()
 
+$COMMANDRETURN = $FALSE
+
 try{
     "$(Get-Date -Format s) Powershell webserver started."
     $WEBLOG = "$(Get-Date -Format s) Powershell webserver started.`n"
@@ -132,8 +129,11 @@ try{
 	    	    $FORMFIELD = $FORMFIELD -replace "\?command=","" -replace "\?button=enter","" -replace "&command=","" -replace "&button=enter",""
 	    	    # when command is given...
     		    if (![STRING]::IsNullOrEmpty($FORMFIELD)){
+    		    
+    		    
 		    	    try {
 		    		    # ... execute command
+		    		    $COMMANDRETURN = $TRUE
 		    		    $RESULT = Invoke-Expression -EA SilentlyContinue $FORMFIELD 2> $NULL | Out-String
 		    	    }catch	{}
 		    	    if ($Error.Count -gt 0){ # retrieve error message on error
@@ -141,12 +141,10 @@ try{
 		    		    $RESULT += $Error[0]
 		    		    $Error.Clear()
 		    	    }
+	    	    }else{
+	    	    		$RESULT = '<form method="GET" action="/"><b>PS $PWD&gt;</b><input type="text" maxlength=255 size=80 name="command" value=""><input type="submit" name="button" value="Enter"></form></body></html>'
 	    	    }
-	    	    # preset form value with command for the caller's convenience
-   			    $HTMLRESPONSE = $HTMLRESPONSE -replace '!FORMFIELD', $FORMFIELD
-   			    # insert powershell prompt to form
-	  		    $PROMPT = "PS $PWD>"
-   			    $HTMLRESPONSE = $HTMLRESPONSE -replace '!PROMPT', $PROMPT
+	    	   
                 break
             }
 
@@ -330,6 +328,8 @@ try{
 		
 
 		$BUFFER = [Text.Encoding]::UTF8.GetBytes($HTMLRESPONSE)
+		
+		#Write-Host $BUFFER
 
         # only send response if not already done
         if (!$RESPONSEWRITTEN -and $RESPONSE.StatusCode -eq 200){
@@ -366,6 +366,13 @@ try{
         		}
         		
         		
+        	}elseif ( $COMMANDRETURN ){
+        		 # return HTML answer to caller
+    	    	# insert header line string into HTML template
+		   		#$HTMLRESPONSE = $HTMLRESPONSE -replace '!HEADERLINE', ""
+		    	# insert result string into HTML template
+		   		$HTMLRESPONSE = $RESULT
+		   		$BUFFER = [Text.Encoding]::UTF8.GetBytes($HTMLRESPONSE)
         	}else{
         		 # return HTML answer to caller
     	    	# insert header line string into HTML template
