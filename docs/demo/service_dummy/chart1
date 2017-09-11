@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-[1,15,40,13]
-=======
-<<<<<<< HEAD
 {
   "data":[1,15,40,13],
   "labels":["lbl1","lbl2","lbl3","lbl4"],
   "bgColors":["rgba(255, 99, 132, 0.2)","rgba(54, 162, 235, 0.2)","rgba(255, 206, 86, 0.2)","rgba(75, 192, 192, 0.2)"],
   "borderColors":[ "rgba(255,99,132,1)","rgba(54, 162, 235, 1)","rgba(255, 206, 86, 1)","rgba(75, 192, 192, 1)"]
 }
-=======
-[1,15,40,13]
->>>>>>> branch 'master' of https://github.com/linoproject/ui.git
->>>>>>> branch 'master' of https://github.com/linoproject/ui
