@@ -14,7 +14,7 @@ This framework is built to help developers and design working better with an htm
 
 ### Running in powershell ###
 * git pull this repo
-* run the web-server powershell script in the direcotry 
+* run the web-server powershell script in the directory 
 ```powershell
 PS> ./Start-WebServer.ps1
 ```
