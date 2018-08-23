@@ -99,15 +99,40 @@ PS> ./Start-WebServer.ps1
 [Start Turorial](tutorial.md)
 
 ## Widgets ##
-[BaseClass]
 
-[Templates]
+### Base ###
+| ClassName | Widget HTML Class | Reference File(s) 						   |Description														 |
+|-----------|-------------------|----------------------------------------------|-----------------------------------------------------------------|
+| Application_Widget	| x-lprjwdg-*		| [Widget.js](lib/application/widget/Widget.js)|Base Widget. It will be used when a non specific Widget is found |
+| Application_WidgetTplsubst	| x-lprjwdg-tplsubst | [WidgetTplsubst.js](lib/application/widget/WidgetTplsubst.js)| |
 
-[Page elements]
 
-[Form elements]
+### Template ###
+| ClassName				    | Widget HTML Class | Reference File(s) 						  			 |Description														 |
+|---------------------------|-------------------|--------------------------------------------------------|-----------------------------------------------------------------|
+| Application_WidgetTplws	| x-lprjwdg-tplws	| [WidgetTplws.js](lib/application/widget/WidgetTplws.js)| Insert HTML code using webservice and substituting markup lang contained in a template with response data |
+| Application_WidgetTpcode	| x-lprjwdg-tplcode	| [WidgetTplcode.js](lib/application/widget/WidgetTplcode.js)||
+| Application_WidgetTplsubst| x-lprjwdg-tpltplsubst	| [WidgetTplsubst.js](lib/application/widget/WidgetTplsubst.js)||
 
-[Graph elements]
+TODO Examples
+
+### Actions ###
+| ClassName				    | Widget HTML Class | Reference File(s) 						  			 |Description														 |
+|---------------------------|-------------------|--------------------------------------------------------|-----------------------------------------------------------------|
+| Application_WidgetActionws	| x-lprjwdg-actionws	| [WidgetActionws.js](lib/application/widget/WidgetActionws.js)|  |
+| Application_WidgetActionobj	| x-lprjwdg-actionobj	| [WidgetActionobj.js](lib/application/widget/WidgetActionobj.js)|  |
+
+### Page ###
+
+### Windows ###
+| ClassName				    | Widget HTML Class | Reference File(s) 						  			 |Description														 |
+|---------------------------|-------------------|--------------------------------------------------------|-----------------------------------------------------------------|
+| Application_WidgetWindowdialog	| x-lprjwdg-windowdialog	| [WidgetWindowdialog.js](lib/application/widget/WidgetWindowdialog.js)|  |
+
+
+### Form ###
+
+### Graph ###
 
 
  
