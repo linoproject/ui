@@ -96,7 +96,7 @@ PS> ./Start-WebServer.ps1
 
 ## Tutorial and examples ##
 
-[Start Turorial - Intro e Application definitions](docs/tutorial1.md)
+[Start Turorial - Intro e Application definitions](docs/tutorial-1.md)
 
 ## Widgets ##
 
