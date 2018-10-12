@@ -19,17 +19,14 @@
             <span class="x-lprjelm x-lprjvar-DirWidget">../../lib/application/widget</span>
             <span class="x-lprjelm x-lprjvar-Debug">true</span>
 
-            <span class="x-lprjelm x-lprjvar-AuthPage">PUBLIC</span>
+            <span class="x-lprjelm x-lprjvar-AuthPage">LOGIN</span>
             <span class="x-lprjelm x-lprjvar-AuthCheckWS">services/auth</span>
+            <span class="x-lprjelm x-lprjvar-AuthCheckOKRedirect">redirect-index.html</span>
             
             <span class="x-lprjelm x-lprjvar-AuthLoginWS">services/login</span>
-            <span class="x-lprjelm x-lprjvar-AuthLoginOKRedirect">top.location.href("index.html");</span>
-            <span class="x-lprjelm x-lprjvar-AuthLoginKORedirect">console.log("Wrong auth");</span>
+            <span class="x-lprjelm x-lprjvar-AuthLoginOKRedirect">redirect-user.html</span>
+            <span class="x-lprjelm x-lprjvar-AuthLoginKORedirect">log-No auth</span>
             
-            <span class="x-lprjelm x-lprjvar-AuthCheckWSTokenVar">token</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckTimer">10000</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckOKRedirect">top.location.href("index.html");</span>
-
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/js/bootstrap.min.js</span>
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/plugin/loading.js</span>
 
@@ -51,7 +48,8 @@
         <div class="content-container">
             <div class="content-area">
                 
-                <a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-AuthLogin btn" id="mnu0">Login</a>
+                <a _ngcontent-c0="" class="x-lprjwdg-buttonlogin x-lprjvar-action-login btn" id="mnu0">Login</a><br>
+                <a _ngcontent-c0="" class="x-lprjwdg-button btn" id="mnu1">Button</a>
                 
             </div>
             <nav class="sidenav">

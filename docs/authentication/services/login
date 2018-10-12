@@ -1,1 +1,4 @@
-{"auth":true}
+{"success":true,
+"role":"ADMIN",
+"User":"admin",
+"Token":"123456"}

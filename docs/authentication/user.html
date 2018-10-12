@@ -13,18 +13,18 @@
     <div style="display:none;">
         <span class="x-lprjstartup">
             <span class="x-lprjelm x-lprjvar-ApplicationName">Clarity FW example</span>
-            
+
             <span class="x-lprjelm x-lprjvar-DirApp">application</span>
             <span class="x-lprjelm x-lprjvar-DirLib">../../lib</span>
             <span class="x-lprjelm x-lprjvar-DirWidget">../../lib/application/widget</span>
             <span class="x-lprjelm x-lprjvar-Debug">true</span>
 
-            <span class="x-lprjelm x-lprjvar-AuthPage">ADMIN</span>
+            <span class="x-lprjelm x-lprjvar-AuthPage">USER</span>
             <span class="x-lprjelm x-lprjvar-AuthCheckWS">services/auth</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckWSTokenVar">token</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckTimer">10000</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckKORedirect">top.location.href("login.html");</span>
-
+            <span class="x-lprjelm x-lprjvar-AuthLogoutWS">services/logout</span>
+            <span class="x-lprjelm x-lprjvar-AuthLogoutOKRedirect">redirect-login.html</span>
+            
+            
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/js/bootstrap.min.js</span>
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/plugin/loading.js</span>
 
@@ -45,43 +45,16 @@
         </header>
         <div class="content-container">
             <div class="content-area">
-                <div class="x-lprjwdg-area" id="area1">
-                    <span class="x-lprjelm x-lprjvar-default" style="display:none">0</span>
-                    <div class="x-div-area" style="display:none">
-                        <h2>Page 1</h2>
-                    </div>
-                    <div class="x-div-area" style="display:none;">
-                        <h2>Page 2</h2>
-                    </div>
-                    <div class="x-div-area" style="display:none;">
-                        <h2>Page 3</h2>
-                    </div>
-                </div>
-
+                
+                <a _ngcontent-c0="" class="x-lprjwdg-buttonlogin x-lprjvar-action-logout btn" id="mnu0">Logout</a>
+                
             </div>
             <nav class="sidenav">
                 <section _ngcontent-c1="" class="sidenav-content">
-
                     <section _ngcontent-c1="" class="nav-group">
-                        <label _ngcontent-c1="" for="tabexample2">Authentication</label>
+                        <label _ngcontent-c1="" for="tabexample2">User Page</label>
                         
-                        <a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-AuthLogout nav-link" id="mnulogout">Logout</a>
-                            
                     </section>
-
-                    <section _ngcontent-c1="" class="nav-group">
-                        <label _ngcontent-c1="" for="tabexample2">Section 1</label>
-                        <ul _ngcontent-c1="" class="nav-list">
-                            <li _ngcontent-c1=""><a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-area1_opendiv_0 nav-link"
-                                    id="mnu0">Page 1</a></li>
-                            <li _ngcontent-c1=""><a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-area1_opendiv_1 nav-link"
-                                    id="mnu1">Page 2</a></li>
-                            <li _ngcontent-c1=""><a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-area1_opendiv_2 nav-link"
-                                    id="mnu2">Page 3</a></li>
-                        </ul>
-                    </section>
-                    
-                    
 
                 </section>
             </nav>

@@ -1,2 +1,4 @@
-{"auth":true,
-"role":"ADMIN"}
+{"success":false,
+"role":"ADMIN",
+User:'admin',
+Token:'123456'}
