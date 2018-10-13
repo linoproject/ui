@@ -19,19 +19,25 @@
             <span class="x-lprjelm x-lprjvar-DirWidget">../../lib/application/widget</span>
             <span class="x-lprjelm x-lprjvar-Debug">true</span>
 
-            <span class="x-lprjelm x-lprjvar-AuthPage">ADMIN</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckWS">services/auth</span>
+            <span class="x-lprjelm x-lprjvar-AuthPage">PRIVATE</span>
+            <span class="x-lprjelm x-lprjvar-AuthCheckWS">services/auth.php</span>
             <span class="x-lprjelm x-lprjvar-AuthCheckWSTokenVar">token</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckTimer">10000</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckKORedirect">top.location.href("login.html");</span>
+            <span class="x-lprjelm x-lprjvar-AuthCheckKORedirect">redirect-login.html</span>
 
+            <span class="x-lprjelm x-lprjvar-AuthLogoutWS">services/logout.php</span>
+            <span class="x-lprjelm x-lprjvar-AuthLogoutOKRedirect">redirect-login.html</span>
+            
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/js/bootstrap.min.js</span>
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/plugin/loading.js</span>
 
             <span class="x-lprjelm x-lprjvar-ExternalCss">../../lib/bootstrap/css/bootstrap.min.css</span>
             <span class="x-lprjelm x-lprjvar-ExternalCss">../../css/main.css</span>
 
+            <span class="x-lprjelm x-lprjvar-ExternalLib">../../node_modules/@webcomponents/custom-elements/custom-elements.min.js</span>
+            <span class="x-lprjelm x-lprjvar-ExternalLib">../../node_modules/@clr/icons/clr-icons.min.js</span>
+
             <span class="x-lprjelm x-lprjvar-ExternalCss">../../node_modules/@clr/ui/clr-ui.min.css</span>
+            <span class="x-lprjelm x-lprjvar-ExternalCss">../../node_modules/@clr/icons/clr-icons.min.css</span>
 
         </span>
     </div>
@@ -64,8 +70,9 @@
 
                     <section _ngcontent-c1="" class="nav-group">
                         <label _ngcontent-c1="" for="tabexample2">Authentication</label>
-                        
+                        <ul _ngcontent-c1="" class="nav-list">
                         <a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-AuthLogout nav-link" id="mnulogout">Logout</a>
+                        </ul>
                             
                     </section>
 

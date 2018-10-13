@@ -20,12 +20,11 @@
             <span class="x-lprjelm x-lprjvar-Debug">true</span>
 
             <span class="x-lprjelm x-lprjvar-AuthPage">LOGIN</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckWS">services/auth</span>
-            <span class="x-lprjelm x-lprjvar-AuthCheckOKRedirect">redirect-index.html</span>
+            <span class="x-lprjelm x-lprjvar-AuthCheckWS">services/auth.php</span>
             
-            <span class="x-lprjelm x-lprjvar-AuthLoginWS">services/login</span>
-            <span class="x-lprjelm x-lprjvar-AuthLoginOKRedirect">redirect-user.html</span>
-            <span class="x-lprjelm x-lprjvar-AuthLoginKORedirect">log-No auth</span>
+            
+            <span class="x-lprjelm x-lprjvar-AuthLoginWS">services/login.php</span>
+            <span class="x-lprjelm x-lprjvar-AuthLoginOKRedirect">redirect-index.html</span>
             
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/js/bootstrap.min.js</span>
             <span class="x-lprjelm x-lprjvar-ExternalLib">../../lib/bootstrap/plugin/loading.js</span>
@@ -33,7 +32,14 @@
             <span class="x-lprjelm x-lprjvar-ExternalCss">../../lib/bootstrap/css/bootstrap.min.css</span>
             <span class="x-lprjelm x-lprjvar-ExternalCss">../../css/main.css</span>
 
+            
+            <span class="x-lprjelm x-lprjvar-ExternalLib">../../node_modules/@webcomponents/custom-elements/custom-elements.min.js</span>
+            <span class="x-lprjelm x-lprjvar-ExternalLib">../../node_modules/@clr/icons/clr-icons.min.js</span>
+
             <span class="x-lprjelm x-lprjvar-ExternalCss">../../node_modules/@clr/ui/clr-ui.min.css</span>
+            <span class="x-lprjelm x-lprjvar-ExternalCss">../../node_modules/@clr/icons/clr-icons.min.css</span>
+            
+            
 
         </span>
     </div>
@@ -48,9 +54,35 @@
         <div class="content-container">
             <div class="content-area">
                 
-                <a _ngcontent-c0="" class="x-lprjwdg-buttonlogin x-lprjvar-action-login btn" id="mnu0">Login</a><br>
-                <a _ngcontent-c0="" class="x-lprjwdg-button btn" id="mnu1">Button</a>
+               
                 
+                <span class="x-lprjwdg-formlogin" id="wdgFormLogin1">
+                    <span class="x-lprjelm x-lprjvar-user">wdgFormInputName</span>
+                    <span class="x-lprjelm x-lprjvar-pass">wdgFormInputPassword</span>
+                    <span class="x-lprjelm x-lprjvar-login">wdgFormBtnLogin</span>
+                </span>
+                
+                
+                <form class="clr-form clr-form-compact">
+                    <span class="x-lprjwdg-input" id="wdgFormInputName">
+                        <span class="x-lprjelm x-lprjvar-label">Username</span>
+                        <span class="x-lprjelm x-lprjvar-name">username</span>
+                        <span class="x-lprjelm x-lprjvar-placeholder">user@domain</span>
+                        <span class="x-lprjelm x-lprjvar-helper"></span>
+                    </span>
+                    <span class="x-lprjwdg-input" id="wdgFormInputPassword">
+                        <span class="x-lprjelm x-lprjvar-type">password</span>
+                        <span class="x-lprjelm x-lprjvar-label">Password</span>
+                        <span class="x-lprjelm x-lprjvar-name">password</span>
+                        
+                        <span class="x-lprjelm x-lprjvar-helper"></span>
+                    </span>
+                    <a _ngcontent-c0="" class="x-lprjwdg-button x-lprjvar-action-wdgFormLogin1_fireAction btn" id="wdgFormBtnLogin">Login</a>
+                </form>
+
+                
+
+             
             </div>
             <nav class="sidenav">
                 <section _ngcontent-c1="" class="sidenav-content">
